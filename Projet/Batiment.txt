@@ -1,0 +1,40 @@
+Batiment 0(  nbNiveaux 2 )
+Maison0
+	 pieces : 
+ 		 Piece0(surface: -33288.68629150101, devis: -665688.8730162779):
+			Sol0( surface: 5.656854249492381, devis: 141.4213562373095):
+				Coins: 
+					Coin0(cx : 0.0 cy: 2.0)
+					Coin1(cx : 0.0 cy: 0.0)
+					Coin2(cx : 2.0 cy: 2.0)
+					Coin3(cx : 2.0 cy: 0.0)
+
+			Plafond0( surface: 5.656854249492381, devis: 169.7056274847714):
+				Coins: 
+					Coin0(cx : 0.0 cy: 2.0)
+					Coin1(cx : 0.0 cy: 0.0)
+					Coin2(cx : 2.0 cy: 2.0)
+					Coin3(cx : 2.0 cy: 0.0)
+
+			 Murs : 
+				Mur0 (nbPorte : 1, nbFenetre :0, surface: -18900.0, devis -378000.0)
+				 Debut : Coin0(cx : 0.0 cy: 2.0)
+				 Fin : Coin1(cx : 0.0 cy: 0.0)
+
+
+				Mur1 (nbPorte : 0, nbFenetre :1, surface: -14400.0, devis -288000.0)
+				 Debut : Coin1(cx : 0.0 cy: 0.0)
+				 Fin : Coin2(cx : 2.0 cy: 2.0)
+
+
+				Mur2 (nbPorte : 0, nbFenetre :0, surface: 0.0, devis 0.0)
+				 Debut : Coin2(cx : 2.0 cy: 2.0)
+				 Fin : Coin3(cx : 2.0 cy: 0.0)
+
+
+				Mur3 (nbPorte : 0, nbFenetre :0, surface: 0.0, devis 0.0)
+				 Debut : Coin3(cx : 2.0 cy: 0.0)
+				 Fin : Coin0(cx : 0.0 cy: 2.0)
+
+
+

@@ -17,6 +17,8 @@ import java.util.ArrayList;
  */
 public class Projet {
     public static void main(String[] args) {
+        System.out.println("Entrez l'hauteur sous plafond du niveau en création"); //Demander l'hsp du niveau à l'utlisateur
+        double hauteurSousPlafond=Lire.d(); //lire l'hauteur sousplafond
 
         ArrayList<Niveau> niveaux = new ArrayList<>();
         ArrayList<Piece> pieces = new ArrayList<>();
@@ -26,13 +28,13 @@ public class Projet {
 
 
         createRevetements(revetements);
-        /*Revetement r1 = new Revetement(1, "A", true,false,false,20);
+        Revetement r1 = new Revetement(1, "A", true,false,false,20);
         Revetement r2 = new Revetement(2, "B", false,true,false,25);
         Revetement r3 = new Revetement(3, "C", false,false,true,30);
 
         revetements.add(r1);
         revetements.add(r2);
-        revetements.add(r3);*/
+        revetements.add(r3);
 
 
         Coin c1 = new Coin(0,2);

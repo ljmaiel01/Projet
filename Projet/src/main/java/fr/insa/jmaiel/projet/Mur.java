@@ -36,8 +36,7 @@ public class Mur {
 
     //Méthode pour calculer la surface d'un mur
     public double surface(){
-        System.out.println("Entrez l'hauteur sous plafond du niveau en création"); //Demander l'hsp du niveau à l'utlisateur
-        double hauteurSousPlafond=Lire.d(); //lire l'hauteur sousplafond
+        double hauteurSousPlafond=0;
         double largeur = Math.sqrt(Math.pow(debut.getCx() - fin.getCx(),2)+Math.pow(debut.getCy()-fin.getCy(),2));
         double surfaceOuverture = nbFenetre * Fenetre.surface() + nbPorte * Porte.surface();
         return (hauteurSousPlafond * largeur) - surfaceOuverture;
