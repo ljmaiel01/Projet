@@ -44,8 +44,8 @@ public class Immeuble extends Batiment {
     @Override
     public double devisBatiment() {
         double montant = 0;
-        for(Appartement appart : apparts){          //Somme des devis des pièces de la maison 
-            montant += appart.devisAppartement();
+        for(Niveau niveau : niveaux){          //Somme des devis des pièces de la maison 
+            montant += niveau.devisNiveau();
         }
         return montant;
     }
