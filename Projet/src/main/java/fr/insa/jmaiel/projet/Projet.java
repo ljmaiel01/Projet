@@ -15,26 +15,32 @@ import java.util.ArrayList;
  *
  * @author Jika
  */
+
+/*
+Dimension des fenêtre standardisée: 0.80m par 0.80m, sopit une surface de 0.64m
+Dimension des portes standradisée: 0.90m par 2.10m soit une surface de 1.89m
+Hauteur sous plafond standradisée: 2.50m
+*/
 public class Projet {
     public static void main(String[] args) {
-        System.out.println("Entrez l'hauteur sous plafond du niveau en création"); //Demander l'hsp du niveau à l'utlisateur
-        double hauteurSousPlafond=Lire.d(); //lire l'hauteur sousplafond
-
+        
+        double hauteurSousPlafond=2.50; //
+        
+        //définition des listes contenant tous les objets qui seront créés pendant la création du batiment
         ArrayList<Niveau> niveaux = new ArrayList<>();
         ArrayList<Piece> pieces = new ArrayList<>();
         ArrayList<Mur> murs = new ArrayList<>();
         ArrayList<Coin> coins = new ArrayList<>();
+        ArrayList<Revetement> cataloguerevetements = new ArrayList<>();
         ArrayList<Revetement> revetements = new ArrayList<>();
 
-
-        createRevetements(revetements);
-        Revetement r1 = new Revetement(1, "A", true,false,false,20);
-        Revetement r2 = new Revetement(2, "B", false,true,false,25);
-        Revetement r3 = new Revetement(3, "C", false,false,true,30);
-
-        revetements.add(r1);
-        revetements.add(r2);
-        revetements.add(r3);
+        //La liste cataloguerevetements contient toutes les informations du catalogue de revetement sous forme d'objet de type Revetement.
+        //On pourra donc remplir la liste de revetement de chaque mur, sol et plafond à partir de cette liste.
+        CatalogueRevetements(cataloguerevetements);
+        
+        revetements.add(cataloguerevetements.get(0));//peinture
+        revetements.add(cataloguerevetements.get(4));//crepi
+        revetements.add(cataloguerevetements.get(4));
 
 
         Coin c1 = new Coin(0,2);
@@ -74,13 +80,10 @@ public class Projet {
 
         m.sauvegarder();
         InterfaceGraphique.demarrage();
-
-
-    }
-
-    public static void createRevetements(ArrayList<Revetement> ListRevetementFichierText){
-
         
+    }//fin main
+
+    public static void CatalogueRevetements(ArrayList<Revetement> ListRevetementFichierText){
         //Debut de la lecture du fichier texte Revetement
 
         //Declaration de la liste contenant les infos du fichier texte et des File and BufferedReader
@@ -119,28 +122,9 @@ public class Projet {
                 System.out.println("Erreur lors de la fermeture des ressources :\n " + err);
             }
         }
-   System.out.println(ListRevetementFichierText.get(1).getPrixUnitaire()); 
-    }     
+    }//fin CatalogueRevetements 
 }//fin class principale
 
-
-        
-        
-        /*
-        //pour la sauvegarde de donnée
-        JFileChooser filechoose = new JFileChooser();
-        filechoose.setCurrentDirectory(new File("."));  // ouvrir la boite de dialogue dans répertoire courant 
-        filechoose.setDialogTitle("Enregistrer tous les exemples"); // nom de la boite de dialogue 
-
-        filechoose.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY); // pour afficher seulement les répertoires 
-
-        String approve = new String("Enregistrer"); // Le bouton pour valider l’enregistrement portera la mention Enregistrer 
-        int resultatEnregistrer = filechoose.showDialog(filechoose, approve); 
-        if (resultatEnregistrer == JFileChooser.APPROVE_OPTION){ // Si l’utilisateur clique sur le bouton Enregistrer 
-            String chemin = filechoose.getSelectedFile().getAbsolutePath()+"\\";
-            System.out.println(chemin);
-        } //pour avoir le chemin absolu 
-        */
 
 
    
