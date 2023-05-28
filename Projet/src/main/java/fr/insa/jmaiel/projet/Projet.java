@@ -119,28 +119,9 @@ public class Projet {
                 System.out.println("Erreur lors de la fermeture des ressources :\n " + err);
             }
         }
-   System.out.println(ListRevetementFichierText.get(1).getPrixUnitaire()); 
     }     
 }//fin class principale
 
-
-        
-        
-        /*
-        //pour la sauvegarde de donnée
-        JFileChooser filechoose = new JFileChooser();
-        filechoose.setCurrentDirectory(new File("."));  // ouvrir la boite de dialogue dans répertoire courant 
-        filechoose.setDialogTitle("Enregistrer tous les exemples"); // nom de la boite de dialogue 
-
-        filechoose.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY); // pour afficher seulement les répertoires 
-
-        String approve = new String("Enregistrer"); // Le bouton pour valider l’enregistrement portera la mention Enregistrer 
-        int resultatEnregistrer = filechoose.showDialog(filechoose, approve); 
-        if (resultatEnregistrer == JFileChooser.APPROVE_OPTION){ // Si l’utilisateur clique sur le bouton Enregistrer 
-            String chemin = filechoose.getSelectedFile().getAbsolutePath()+"\\";
-            System.out.println(chemin);
-        } //pour avoir le chemin absolu 
-        */
 
 
    
