@@ -36,7 +36,7 @@ public class Mur {
 
     //Méthode pour calculer la surface d'un mur
     public double surface(){
-        double hauteurSousPlafond=0;
+        double hauteurSousPlafond=2;
         double largeur = Math.sqrt(Math.pow(debut.getCx() - fin.getCx(),2)+Math.pow(debut.getCy()-fin.getCy(),2));
         double surfaceOuverture = nbFenetre * Fenetre.surface() + nbPorte * Porte.surface();
         return (hauteurSousPlafond * largeur) - surfaceOuverture;

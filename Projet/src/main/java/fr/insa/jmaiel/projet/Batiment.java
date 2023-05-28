@@ -41,7 +41,8 @@ public abstract class Batiment {
         }
         return montant;
     }
- public void sauvegarder(){
+    
+    public void sauvegarder(){
         String cheminFichier = "Batiment.txt";
         String contenu = this.toString();
         try {
@@ -61,10 +62,6 @@ public abstract class Batiment {
             System.out.println("Une erreur s'est produite lors de l'écriture dans le fichier : " + e.getMessage());
         }
 
-    }
-
-
-    public void dessiner(){
-        //TO DO
-    }
-}
+    }//fin sauvegarder
+ 
+}//fin class Batiment

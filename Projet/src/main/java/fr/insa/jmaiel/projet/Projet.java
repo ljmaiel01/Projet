@@ -15,11 +15,18 @@ import java.util.ArrayList;
  *
  * @author Jika
  */
+
+/*
+Dimension des fenêtre standardisée: 0.80m par 0.80m, sopit une surface de 0.64m
+Dimension des portes standradisée: 0.90m par 2.10m soit une surface de 1.89m
+Hauteur sous plafond standradisée: 2.50m
+*/
 public class Projet {
     public static void main(String[] args) {
-        System.out.println("Entrez l'hauteur sous plafond du niveau en création"); //Demander l'hsp du niveau à l'utlisateur
-        double hauteurSousPlafond=Lire.d(); //lire l'hauteur sousplafond
-
+        
+        double hauteurSousPlafond=2.50; //
+        
+        //définition des listes contenant tous les objets qui seront créés pendant la création du batiment
         ArrayList<Niveau> niveaux = new ArrayList<>();
         ArrayList<Piece> pieces = new ArrayList<>();
         ArrayList<Mur> murs = new ArrayList<>();
@@ -27,11 +34,13 @@ public class Projet {
         ArrayList<Revetement> cataloguerevetements = new ArrayList<>();
         ArrayList<Revetement> revetements = new ArrayList<>();
 
-
+        //La liste cataloguerevetements contient toutes les informations du catalogue de revetement sous forme d'objet de type Revetement.
+        //On pourra donc remplir la liste de revetement de chaque mur, sol et plafond à partir de cette liste.
         CatalogueRevetements(cataloguerevetements);
         
         revetements.add(cataloguerevetements.get(0));//peinture
         revetements.add(cataloguerevetements.get(4));//crepi
+        revetements.add(cataloguerevetements.get(4));
 
 
         Coin c1 = new Coin(0,2);

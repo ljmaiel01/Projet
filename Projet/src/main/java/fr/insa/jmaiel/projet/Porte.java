@@ -6,8 +6,8 @@ package fr.insa.jmaiel.projet;
 
 public class Porte{
     //Attributs
-    private final static double dimX =  90;
-    private final static double dimY =  210;
+    private final static double dimX =  0.90;
+    private final static double dimY =  2.10;
     
     //méthode pour calculer la surface de la porte (standard)
     public static double surface(){
