@@ -24,17 +24,14 @@ public class Projet {
         ArrayList<Piece> pieces = new ArrayList<>();
         ArrayList<Mur> murs = new ArrayList<>();
         ArrayList<Coin> coins = new ArrayList<>();
+        ArrayList<Revetement> cataloguerevetements = new ArrayList<>();
         ArrayList<Revetement> revetements = new ArrayList<>();
 
 
-        createRevetements(revetements);
-        Revetement r1 = new Revetement(1, "A", true,false,false,20);
-        Revetement r2 = new Revetement(2, "B", false,true,false,25);
-        Revetement r3 = new Revetement(3, "C", false,false,true,30);
-
-        revetements.add(r1);
-        revetements.add(r2);
-        revetements.add(r3);
+        CatalogueRevetements(cataloguerevetements);
+        
+        revetements.add(cataloguerevetements.get(0));//peinture
+        revetements.add(cataloguerevetements.get(4));//crepi
 
 
         Coin c1 = new Coin(0,2);
@@ -74,13 +71,10 @@ public class Projet {
 
         m.sauvegarder();
         InterfaceGraphique.demarrage();
-
-
-    }
-
-    public static void createRevetements(ArrayList<Revetement> ListRevetementFichierText){
-
         
+    }//fin main
+
+    public static void CatalogueRevetements(ArrayList<Revetement> ListRevetementFichierText){
         //Debut de la lecture du fichier texte Revetement
 
         //Declaration de la liste contenant les infos du fichier texte et des File and BufferedReader
@@ -119,7 +113,7 @@ public class Projet {
                 System.out.println("Erreur lors de la fermeture des ressources :\n " + err);
             }
         }
-    }     
+    }//fin CatalogueRevetements 
 }//fin class principale
 
 

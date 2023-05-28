@@ -23,7 +23,7 @@ public class Appartement {
     }
 
     //Pour affichage et sauvegarde
-     @Override
+    @Override
     public String toString() {
 
         String textPiece = "";
